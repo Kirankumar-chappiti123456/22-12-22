@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void fun(char i)
+{
+    i=((i&0X0f)<<4)|((i&0Xf0)>>4);
+    printf("%u",i);
+}
+int main()
+{
+    unsigned char i=2;
+   void (*fptr)(char)=fun;
+   fptr(i);
+    
+}
